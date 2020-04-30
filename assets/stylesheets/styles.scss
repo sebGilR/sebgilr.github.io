@@ -2,4 +2,28 @@
   margin: 0;
   padding: 0;
   border: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+$primary: #1f1e1e;
+$secondary: #bebebe;
+$secondary-light: #fbfbfb;
+
+@mixin primary-color {
+  background-color: $primary;
+  color: $secondary-light;
+}
+
+@mixin secondary-color {
+  background-color: $secondary;
+  color: $primary;
+}
+
+.nav {
+  @include primary-color();
+}
+
+main {
+  @include secondary-color();
 }

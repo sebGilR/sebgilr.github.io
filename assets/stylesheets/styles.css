@@ -3,7 +3,17 @@
   padding: 0;
   border: 0;
   text-decoration: none;
-  box-sizing: border-box;
-  color: black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.nav {
+  background-color: #1f1e1e;
+  color: #fbfbfb;
+}
+
+main {
+  background-color: #bebebe;
+  color: #1f1e1e;
 }
 /*# sourceMappingURL=styles.css.map */
