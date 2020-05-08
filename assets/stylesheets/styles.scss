@@ -5,11 +5,28 @@
   text-decoration: none;
   box-sizing: border-box;
   list-style: none;
+  letter-spacing: 1px;  
 }
 
 $primary: #1f1e1e;
 $secondary: #f1f1f1;
 $highlight: rgb(107, 202, 107);
+
+@mixin tablet {
+  @media (min-width: 768px) { @content; }
+}
+
+@mixin laptop {
+  @media (min-width: 1024px) { @content; }
+}
+
+@mixin desktop {
+  @media (min-width: 1445px) { @content; }
+}
+
+@mixin desktop_xl {
+  @media (min-width: 2100px) { @content; }
+}
 
 
 @mixin primary-color {
@@ -29,55 +46,119 @@ $highlight: rgb(107, 202, 107);
   left: 0;
   top: 0;
   bottom: 0;
-  padding: 30px;
+  padding: 10px 0;
+  width: 60px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-shadow: 0px 0px 5px $primary;
+  z-index: 3;
+
+  @include tablet {
+    padding: 30px 0;
+    width: 180px;
+    letter-spacing: 1px;
+  }
+
+  @include desktop {
+    width: 230px;
+  }
+
+  @include desktop_xl {
+    width: 320px;
+    font-size: 1.2em;
+  }
 
   a {
     color: $secondary;
+    font-size: 1em;
   }
 
   &_menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  
-    a {
-      display: block;
-      margin: 15px 0;
-      border-bottom: $highlight 2px solid;
+    display: none;
 
-      &:hover {
-        border-bottom: $secondary 2px solid;
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    
+      a {
+        display: block;
+        margin: 15px 0;
+        border-bottom: $highlight 2px solid;
+
+        &:hover {
+          letter-spacing: 2px;
+          border-bottom: $secondary 2px solid;
+        }
       }
     }
   }
 
-  &_title {
-    display: inline-block;
-    font-size: 1.5em;
-    margin-bottom: 50px;
-  }
-
-  &_network {
+  &_icons {
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 50px;
+    flex-direction: column;
+    align-items: center;
 
     a {
       font-size: 2em;
+      margin-top: 30px;
 
       &:hover {
         font-size: 2.5em;
         margin-top: -0.25em;
       }
     }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &_title {
+    display: none;
+    
+    @include tablet {
+      display: inline-block;
+      font-size: 1.5em;
+      margin-bottom: 50px;
+      text-align: center;
+    }
+  }
+
+  &_network {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      font-size: 2em;
+      margin-top: 30px;
+
+      &:hover {
+        font-size: 2.5em;
+        margin-top: -0.25em;
+      }
+    }
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-top: 50px;
+
+      a {
+        font-size: 2em;
+
+        &:hover {
+          font-size: 2.5em;
+          margin-top: -0.25em;
+        }
+      }
+    }
   }
 
   #progress {
-    width: 3px;
+    width: 2px;
     height: 50%;
     position: absolute;
     right: 0;
@@ -88,4 +169,209 @@ $highlight: rgb(107, 202, 107);
 
 main {
   @include secondary-color();
+
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: 60px;
+  padding: 0 0 5vh 0;
+
+  @include desktop {
+    padding-right: 10%;
+    padding-left: 10%;
+    font-size: 110%;
+  }
+
+  @include desktop_xl {
+    padding-right: 20%;
+    padding-left: 20%;
+  }
+
+  .about {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 50px;
+  }
+
+  .projects {
+
+    &_project{
+      padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+
+      @include laptop {
+        display: grid;
+        grid-template-columns: 60% calc(40% - 50px);
+        grid-template-rows: auto 30px;
+        padding: 50px;
+        grid-gap: 50px;
+        align-items: start;
+      }
+
+      .col {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .small {
+          margin: 15px 0;
+
+          @include laptop {
+            display: none;
+          }
+        }
+
+        .big {
+          display: none;
+
+          @include laptop {
+            display: inline-block;
+          }
+        }
+      }
+
+      .browser-frame {
+        position: relative;
+        border-radius: 5px;
+        background-color: rgba(230, 230, 230, 0.7);
+        border-top: 2em solid rgba(230, 230, 230, 0.7);
+        box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.4);
+        height: auto;
+        max-width: 400px;
+
+        @include laptop {
+          max-width: 500px;
+        }
+
+        &::before {
+          display: block;
+          position: absolute;
+          content: '';
+          top: -1.25em;
+          left: 1em;
+          width: 0.5em;
+          height: 0.5em;
+          border-radius: 50%;
+          background-color: #f44;
+          box-shadow: 0 0 0 2px #f44, 1.5em 0 0 2px #9b3, 3em 0 0 2px #fb5;
+        }
+
+        img {
+          display: inline-block;
+          width: 100%;
+          height: auto;
+        }
+
+      }
+
+      .actions {
+        text-align: center;
+        margin: 20px 0;
+
+        @include tablet {
+          margin-top: 15px;
+        }
+
+        a {
+          font-weight: bold;
+          color: $secondary;
+          background-color: $primary;
+          display: inline-block;
+          box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.4);
+          padding: 7px;
+          border-radius: 5px;
+
+          &:hover {
+            color: $primary;
+            background-color: $highlight;
+          }
+        }
+      }
+
+      &_description {
+        margin: 20px 0 30px 0;
+      }
+      
+      .stack {
+        height: auto;
+        width: 100%;
+
+        @include tablet {
+          grid-column: 1 / 3;
+        }
+
+        ul {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+
+          @include tablet {
+            height: 30px;
+          }
+
+          li:not(:last-child) {
+            margin-right: 30px;
+          }
+
+          svg {
+            height: 30px;
+            width: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .publications {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .visit {
+      color: $primary;
+    }
+    
+    &_publication {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+
+      @include tablet {
+        flex-direction: row;
+      }
+
+      img {
+        width: 220px;
+        height: auto;
+        margin-bottom: 20px;
+
+        @include tablet {
+          width: 180px;
+          margin-bottom: 0;
+        }
+      }
+
+      p {
+        margin-left: 20px;
+      }
+    }
+  }
+
+  @include tablet {
+    left: 180px;
+  }
+
+  @include desktop {
+    left: 230px;
+  }
 }
