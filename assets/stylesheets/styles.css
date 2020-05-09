@@ -6,12 +6,27 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   list-style: none;
-  letter-spacing: 1px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+  font-family: 'Oswald', sans-serif;
+}
+
+body {
+  font-family: 'Jost', sans-serif;
+}
+
+h1 {
+  font-size: 1.5em;
 }
 
 .nav {
   background-color: #1f1e1e;
-  color: #f1f1f1;
+  color: #ebe9e9;
   position: fixed;
   left: 0;
   top: 0;
@@ -55,7 +70,7 @@
 }
 
 .nav a {
-  color: #f1f1f1;
+  color: #ebe9e9;
   font-size: 1em;
 }
 
@@ -79,11 +94,15 @@
   .nav_menu a {
     display: block;
     margin: 15px 0;
-    border-bottom: #6bca6b 2px solid;
+    border-bottom: #64c064 2px solid;
+    -webkit-transition: ease-in-out .2s;
+    transition: ease-in-out .2s;
   }
   .nav_menu a:hover {
     letter-spacing: 2px;
-    border-bottom: #f1f1f1 2px solid;
+    color: #64c064;
+    -webkit-transition: ease-in-out .2s;
+    transition: ease-in-out .2s;
   }
 }
 
@@ -142,16 +161,6 @@
           align-items: center;
 }
 
-.nav_network a {
-  font-size: 2em;
-  margin-top: 30px;
-}
-
-.nav_network a:hover {
-  font-size: 2.5em;
-  margin-top: -0.25em;
-}
-
 @media (min-width: 768px) {
   .nav_network {
     -webkit-box-orient: horizontal;
@@ -163,32 +172,59 @@
             justify-content: space-evenly;
     margin-top: 50px;
   }
+}
+
+.nav_network a {
+  font-size: 2em;
+  margin-top: 30px;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.nav_network a:hover {
+  font-size: 2.5em;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+@media (min-width: 768px) {
   .nav_network a {
     font-size: 2em;
   }
   .nav_network a:hover {
     font-size: 2.5em;
-    margin-top: -0.25em;
   }
 }
 
 .nav #progress {
   width: 2px;
-  height: 50%;
+  height: 100%;
   position: absolute;
   right: 0;
-  bottom: 0;
-  background-color: #6bca6b;
+  top: 0;
+  background-color: #64c064;
 }
 
 main {
-  background-color: #f1f1f1;
+  background-color: #ebe9e9;
   color: #1f1e1e;
   position: absolute;
   right: 0;
   top: 0;
   left: 60px;
   padding: 0 0 5vh 0;
+  letter-spacing: 1px;
+}
+
+main h1, main h3, main span, main strong {
+  color: #64c064;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.219);
+  font-weight: bold;
+}
+
+main h2 {
+  text-align: center;
+  margin: 20px 0;
 }
 
 @media (min-width: 1445px) {
@@ -222,6 +258,17 @@ main .about {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   padding: 50px;
+  color: #ebe9e9;
+  text-shadow: 0 0 7px #1f1e1e;
+  background-color: #1f1e1e;
+  font-size: 1.2em;
+}
+
+@media (min-width: 2100px) {
+  main .about {
+    border-radius: 10px;
+    margin: 20px;
+  }
 }
 
 main .projects_project {
@@ -237,6 +284,7 @@ main .projects_project {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom: 3px double #64c064;
 }
 
 @media (min-width: 1024px) {
@@ -339,22 +387,40 @@ main .projects_project .actions {
 
 main .projects_project .actions a {
   font-weight: bold;
-  color: #f1f1f1;
-  background-color: #1f1e1e;
+  color: #1f1e1e;
+  background-color: #64c064;
   display: inline-block;
-  -webkit-box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.4);
-          box-shadow: 0 0.1em 1em 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0.3em 0.5em 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0.3em 0.5em 0 rgba(0, 0, 0, 0.5);
   padding: 7px;
   border-radius: 5px;
+  -webkit-transition: ease-in .3s;
+  transition: ease-in .3s;
 }
 
 main .projects_project .actions a:hover {
-  color: #1f1e1e;
-  background-color: #6bca6b;
+  color: #64c064;
+  text-shadow: 0 0 7px #1f1e1e;
+  background-color: #1f1e1e;
+  -webkit-transition: ease-out  .3s;
+  transition: ease-out  .3s;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 main .projects_project_description {
   margin: 20px 0 30px 0;
+}
+
+main .projects_project_description a {
+  font-weight: bold;
+  color: #1f1e1e;
+  display: inline-block;
+  border-bottom: 2px solid #64c064;
+}
+
+main .projects_project_description a:hover {
+  color: #64c064;
 }
 
 main .projects_project .stack {
