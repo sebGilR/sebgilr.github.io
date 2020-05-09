@@ -7,7 +7,7 @@ This is my web portfolio, where you will have access to some of my projects, my 
 [sebgil.me](https://sebgil.me)
 
 ## Screenshot
-![screenshot](assets/img/portfolio.PNG)
+![screenshot](assets/img/portfolio.png)
 
 👤 **Sebastian Gil Rodriguez**
 
