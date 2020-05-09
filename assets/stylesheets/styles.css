@@ -127,7 +127,6 @@ h1 {
 
 .nav_icons a:hover {
   font-size: 2.5em;
-  margin-top: -0.25em;
 }
 
 @media (min-width: 768px) {
@@ -286,6 +285,10 @@ main .projects_project {
       -ms-flex-align: center;
           align-items: center;
   border-bottom: 3px double #64c064;
+}
+
+main .projects_project h3 {
+  color: rgba(43, 115, 43, 0.842);
 }
 
 @media (min-width: 1024px) {
@@ -477,6 +480,10 @@ main .publications {
 
 main .publications .visit {
   color: #1f1e1e;
+}
+
+main .publications strong {
+  color: rgba(43, 115, 43, 0.842);
 }
 
 main .publications_publication {

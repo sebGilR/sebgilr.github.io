@@ -245,6 +245,10 @@ main {
       align-items: center;
       border-bottom: 3px double $highlight;
 
+      h3 {
+        color: rgba(43, 115, 43, 0.842);
+      }
+
       @include laptop {
         display: grid;
         grid-template-columns: 60% calc(40% - 50px);
@@ -393,6 +397,10 @@ main {
 
     .visit {
       color: $primary;
+    }
+
+    strong {
+      color: rgba(43, 115, 43, 0.842);
     }
     
     &_publication {
