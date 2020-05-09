@@ -4,7 +4,7 @@ This is my web portfolio, where you will have access to some of my projects, my 
 
 ## Live Version
 
-sebgil.me
+[sebgil.me](https://sebgil.me)
 
 ## Screenshot
 ![screenshot](assets/img/portfolio.PNG)
