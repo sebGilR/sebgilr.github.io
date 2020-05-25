@@ -212,7 +212,6 @@ main {
   right: 0;
   top: 0;
   left: 60px;
-  padding: 0 0 5vh 0;
   letter-spacing: 1px;
 }
 
@@ -544,5 +543,22 @@ main .publications_publication p {
 #tracker img {
   max-height: 300px;
   width: auto;
+}
+
+footer {
+  background-color: #1f1e1e;
+  color: #ebe9e9;
+  padding: 0.5em;
+  text-align: center;
+  line-height: 2em;
+  margin-top: 3em;
+}
+
+footer a {
+  color: #64c064;
+}
+
+footer a:hover {
+  color: #ebe9e9;
 }
 /*# sourceMappingURL=styles.css.map */

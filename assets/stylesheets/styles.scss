@@ -191,7 +191,6 @@ main {
   right: 0;
   top: 0;
   left: 60px;
-  padding: 0 0 5vh 0;
   letter-spacing: 1px;
 
   h1, h3, span, strong {
@@ -444,5 +443,22 @@ main {
   img {
     max-height: 300px;
     width: auto;
+  }
+}
+
+footer {
+  background-color: $primary;
+  color: $secondary;
+  padding: 0.5em;
+  text-align: center;
+  line-height: 2em;
+  margin-top: 3em;
+
+  a {
+    color: $highlight;
+
+    &:hover {
+      color: $secondary;
+    }
   }
 }
