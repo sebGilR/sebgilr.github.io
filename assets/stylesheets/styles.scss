@@ -255,6 +255,8 @@ main {
         padding: 50px;
         grid-gap: 50px;
         align-items: start;
+
+        
       }
 
       .col {
@@ -440,9 +442,14 @@ main {
 }
 
 #tracker {
-  img {
-    max-height: 300px;
+  &_img {
+    max-height: 350px;
     width: auto;
+  }
+
+  @include laptop {
+    grid-template-columns: 40% calc(60% - 50px);
+    grid-template-rows: auto 30px;
   }
 }
 

@@ -540,9 +540,18 @@ main .publications_publication p {
   }
 }
 
-#tracker img {
-  max-height: 300px;
+#tracker_img {
+  max-height: 350px;
   width: auto;
+}
+
+@media (min-width: 1024px) {
+  #tracker {
+    -ms-grid-columns: 40% calc(60% - 50px);
+        grid-template-columns: 40% calc(60% - 50px);
+    -ms-grid-rows: auto 30px;
+        grid-template-rows: auto 30px;
+  }
 }
 
 footer {
