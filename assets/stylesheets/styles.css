@@ -540,4 +540,9 @@ main .publications_publication p {
     left: 230px;
   }
 }
+
+#tracker img {
+  max-height: 300px;
+  width: auto;
+}
 /*# sourceMappingURL=styles.css.map */
