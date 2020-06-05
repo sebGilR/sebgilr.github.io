@@ -1,6 +1,6 @@
 # Sebastian Gil Rodriguez - Portfolio
 
-This is my web portfolio, where you will have access to some of my projects, my resume, contact info and social media profiles.
+This is my web portfolio, where you will have access to some of my projects, my resume, contact info, and social media profiles.
 
 ## Live Version
 
