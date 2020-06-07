@@ -1,0 +1,32 @@
+{
+  "name": "sebgilr.github.io",
+  "version": "1.0.0",
+  "description": "This is my web portfolio, where you will have access to some of my projects, my resume, contact info, and social media profiles.",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebGilR/sebgilr.github.io.git"
+  },
+  "keywords": [],
+  "author": "Sebastian Gil Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sebGilR/sebgilr.github.io/issues"
+  },
+  "homepage": "https://github.com/sebGilR/sebgilr.github.io#readme",
+  "devDependencies": {
+    "css-loader": "^3.5.3",
+    "file-loader": "^6.0.0",
+    "node-sass": "^4.14.1",
+    "sass": "^1.26.7",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
