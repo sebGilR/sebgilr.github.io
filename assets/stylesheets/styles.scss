@@ -201,7 +201,8 @@ main {
 
   h2 {
     text-align: center;
-    margin: 20px 0;
+    padding: 15px 0;
+    background-color: $highlight;
   }
 
   @include desktop {
@@ -216,20 +217,34 @@ main {
   }
 
   .about {
-    height: 40vh;
+    min-height: 245px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     padding: 50px;
     color: $secondary;
     text-shadow: 0 0 7px $primary;
     background-color: $primary;
     font-size: 1.2em;
 
-    @include desktop_xl() {
+    @include laptop {
+      height: 50vh;
+    }
+
+    @include desktop_xl {
       border-radius: 10px;
       margin: 20px;
+    }
+
+    #extra {
+      color: $secondary;
+      font-weight: normal;
+      display: none;
+
+      @include tablet {
+        display: inline;
+      }
     }
 
   }
@@ -248,15 +263,18 @@ main {
         color: rgba(43, 115, 43, 0.842);
       }
 
-      @include laptop {
+      @include tablet {
         display: grid;
-        grid-template-columns: 60% calc(40% - 50px);
-        grid-template-rows: auto 30px;
+        grid-template-columns: 60% calc(40% - 25px);
+        grid-template-rows: auto;
         padding: 50px;
-        grid-gap: 50px;
+        grid-gap: 25px;
         align-items: start;
+      }
 
-        
+      @include laptop {
+        grid-template-columns: 60% calc(40% - 50px);
+        grid-gap: 50px;
       }
 
       .col {
@@ -348,6 +366,14 @@ main {
       &_description {
         margin: 20px 0 30px 0;
 
+        @include tablet {
+          margin-top: 55px
+        }
+
+        @include laptop {
+          margin-top: 20px;
+        }
+
         a {
           font-weight: bold;
           color: $primary;
@@ -356,35 +382,6 @@ main {
 
           &:hover {
             color: $highlight;
-          }
-        }
-      }
-      
-      .stack {
-        height: auto;
-        width: 100%;
-
-        @include tablet {
-          grid-column: 1 / 3;
-        }
-
-        ul {
-          width: 100%;
-          display: flex;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          @include tablet {
-            height: 30px;
-          }
-
-          li:not(:last-child) {
-            margin-right: 30px;
-          }
-
-          svg {
-            height: 30px;
-            width: auto;
           }
         }
       }
@@ -449,7 +446,7 @@ main {
 
   @include laptop {
     grid-template-columns: 40% calc(60% - 50px);
-    grid-template-rows: auto 30px;
+    // grid-template-rows: auto;
   }
 }
 
