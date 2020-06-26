@@ -6,15 +6,15 @@ This is my web portfolio, where you will have access to some of my projects, my 
 
 [sebgil.me](https://sebgil.me)
 
+## Screenshot
+
+![screenshot](assets/img/portfolio.png)
+
 ## Future Changes
 
 - Use webpack for bundling the website files.
 - Add in-and-out JS animations for projects.
 - Dynamically create each project/article entry instead of hard coding it.
-
-## Screenshot
-
-![screenshot](assets/img/portfolio.png)
 
 👤 **Sebastian Gil Rodriguez**
 
