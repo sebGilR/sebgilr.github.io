@@ -150,6 +150,7 @@ h1 {
 }
 
 .nav_network {
+  background-color: #64c064;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,9 +178,9 @@ h1 {
 
 .nav_network a {
   font-size: 2em;
-  margin-top: 30px;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
+  color: #1f1e1e;
 }
 
 .nav_network a:hover {
