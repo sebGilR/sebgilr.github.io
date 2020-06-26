@@ -154,7 +154,6 @@ h1 {
     @include laptop {
       flex-direction: row;
       justify-content: space-evenly;
-      // margin-top: 50px;
     }
 
     a {
@@ -224,7 +223,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 50px;
     color: $secondary;
     text-shadow: 0 0 7px $primary;
