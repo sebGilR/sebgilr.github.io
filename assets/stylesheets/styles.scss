@@ -228,7 +228,7 @@ main {
     color: $secondary;
     text-shadow: 0 0 7px $primary;
     background-color: $primary;
-    font-size: 1.2em;
+    font-size: 1em;
 
     @include laptop {
       height: 50vh;

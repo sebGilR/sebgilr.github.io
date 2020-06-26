@@ -262,7 +262,7 @@ main .about {
   color: #ebe9e9;
   text-shadow: 0 0 7px #1f1e1e;
   background-color: #1f1e1e;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 @media (min-width: 1024px) {
