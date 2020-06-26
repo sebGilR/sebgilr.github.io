@@ -28,4 +28,4 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgement
 
-Icons made by [Freepik](https://www.flaticon.com/authors/freepik)from [flaticon.com](https://www.flaticon.com/) and [freeicons.io](https://freeicons.io/)
+Icons from [flaticon.com](https://www.flaticon.com/) and [freeicons.io](https://freeicons.io/)
