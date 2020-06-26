@@ -69,8 +69,9 @@ h1 {
   justify-content: center;
   box-shadow: 0px 0px 5px $primary;
   z-index: 3;
+  border-right: 1px solid $highlight;
 
-  @include tablet {
+  @include laptop {
     padding: 30px 0;
     width: 180px;
     letter-spacing: 1px;
@@ -93,7 +94,7 @@ h1 {
   &_menu {
     display: none;
 
-    @include tablet {
+    @include laptop {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -127,7 +128,7 @@ h1 {
       }
     }
 
-    @include tablet {
+    @include laptop {
       display: none;
     }
   }
@@ -135,7 +136,7 @@ h1 {
   &_title {
     display: none;
     
-    @include tablet {
+    @include laptop {
       display: inline-block;
       font-size: 1.5em;
       margin-bottom: 50px;
@@ -148,7 +149,7 @@ h1 {
     flex-direction: column;
     align-items: center;
 
-    @include tablet {
+    @include laptop {
       flex-direction: row;
       justify-content: space-evenly;
       margin-top: 50px;
@@ -175,8 +176,8 @@ h1 {
   }
 
   #progress {
-    width: 2px;
-    height: 100%;
+    width: 3px;
+    height: 0%;
     position: absolute;
     right: 0;
     top: 0;
@@ -267,13 +268,14 @@ main {
         display: grid;
         grid-template-columns: 60% calc(40% - 25px);
         grid-template-rows: auto;
-        padding: 50px;
+        padding: 25px;
         grid-gap: 25px;
         align-items: start;
       }
 
       @include laptop {
         grid-template-columns: 60% calc(40% - 50px);
+        padding: 50px;
         grid-gap: 50px;
       }
 
@@ -365,12 +367,12 @@ main {
 
       .stack {
         padding: 15px;
-        // background-color: $primary;
         border-bottom: 10px solid $primary;
-        border-right: 20px solid $secondary;
-        border-left: 20px solid $secondary;
-        // border-radius: px;
+        border-right: 20px solid transparent;
+        border-left: 20px solid transparent;
         margin-top: 25px;
+        box-shadow: 0 15px 10px -10px $primary;
+
         img {
           max-width: 36px;
         }
@@ -410,6 +412,10 @@ main {
 
     .visit {
       color: $primary;
+
+      &:hover {
+        background-color: lightgray;
+      }
     }
 
     strong {
@@ -445,7 +451,7 @@ main {
     }
   }
 
-  @include tablet {
+  @include laptop {
     left: 180px;
   }
 
@@ -459,11 +465,6 @@ main {
     max-height: 350px;
     width: auto;
   }
-
-  @include laptop {
-    grid-template-columns: 40% calc(60% - 50px);
-    // grid-template-rows: auto;
-  }
 }
 
 footer {
@@ -472,7 +473,6 @@ footer {
   padding: 0.5em;
   text-align: center;
   line-height: 2em;
-  margin-top: 3em;
 
   a {
     color: $highlight;
@@ -480,5 +480,24 @@ footer {
     &:hover {
       color: $secondary;
     }
+  }
+}
+
+#indicator {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $highlight;
+  box-shadow: 0 0 5px $primary;
+  z-index: 50;
+  line-height: 55px;
+  font-size: 3em;
+  text-align: center;
+
+  a {
+    color: $primary;
   }
 }

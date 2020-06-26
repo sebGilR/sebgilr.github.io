@@ -47,9 +47,10 @@ h1 {
   -webkit-box-shadow: 0px 0px 5px #1f1e1e;
           box-shadow: 0px 0px 5px #1f1e1e;
   z-index: 3;
+  border-right: 1px solid #64c064;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .nav {
     padding: 30px 0;
     width: 180px;
@@ -79,7 +80,7 @@ h1 {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .nav_menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -129,7 +130,7 @@ h1 {
   font-size: 2.5em;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .nav_icons {
     display: none;
   }
@@ -139,7 +140,7 @@ h1 {
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .nav_title {
     display: inline-block;
     font-size: 1.5em;
@@ -161,7 +162,7 @@ h1 {
           align-items: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .nav_network {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -197,8 +198,8 @@ h1 {
 }
 
 .nav #progress {
-  width: 2px;
-  height: 100%;
+  width: 3px;
+  height: 0%;
   position: absolute;
   right: 0;
   top: 0;
@@ -317,7 +318,7 @@ main .projects_project h3 {
         grid-template-columns: 60% calc(40% - 25px);
     -ms-grid-rows: auto;
         grid-template-rows: auto;
-    padding: 50px;
+    padding: 25px;
     grid-gap: 25px;
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -329,6 +330,7 @@ main .projects_project h3 {
   main .projects_project {
     -ms-grid-columns: 60% calc(40% - 50px);
         grid-template-columns: 60% calc(40% - 50px);
+    padding: 50px;
     grid-gap: 50px;
   }
 }
@@ -441,9 +443,11 @@ main .projects_project .actions a:hover {
 main .projects_project .stack {
   padding: 15px;
   border-bottom: 10px solid #1f1e1e;
-  border-right: 20px solid #ebe9e9;
-  border-left: 20px solid #ebe9e9;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
   margin-top: 25px;
+  -webkit-box-shadow: 0 15px 10px -10px #1f1e1e;
+          box-shadow: 0 15px 10px -10px #1f1e1e;
 }
 
 main .projects_project .stack img {
@@ -494,6 +498,10 @@ main .publications .visit {
   color: #1f1e1e;
 }
 
+main .publications .visit:hover {
+  background-color: lightgray;
+}
+
 main .publications strong {
   color: rgba(43, 115, 43, 0.842);
 }
@@ -542,7 +550,7 @@ main .publications_publication p {
   margin-left: 20px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   main {
     left: 180px;
   }
@@ -559,20 +567,12 @@ main .publications_publication p {
   width: auto;
 }
 
-@media (min-width: 1024px) {
-  #tracker {
-    -ms-grid-columns: 40% calc(60% - 50px);
-        grid-template-columns: 40% calc(60% - 50px);
-  }
-}
-
 footer {
   background-color: #1f1e1e;
   color: #ebe9e9;
   padding: 0.5em;
   text-align: center;
   line-height: 2em;
-  margin-top: 3em;
 }
 
 footer a {
@@ -581,5 +581,25 @@ footer a {
 
 footer a:hover {
   color: #ebe9e9;
+}
+
+#indicator {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #64c064;
+  -webkit-box-shadow: 0 0 5px #1f1e1e;
+          box-shadow: 0 0 5px #1f1e1e;
+  z-index: 50;
+  line-height: 55px;
+  font-size: 3em;
+  text-align: center;
+}
+
+#indicator a {
+  color: #1f1e1e;
 }
 /*# sourceMappingURL=styles.css.map */
