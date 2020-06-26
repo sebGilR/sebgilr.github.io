@@ -161,6 +161,7 @@ h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: 50px;
 }
 
 @media (min-width: 1024px) {
@@ -172,7 +173,6 @@ h1 {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    margin-top: 50px;
   }
 }
 

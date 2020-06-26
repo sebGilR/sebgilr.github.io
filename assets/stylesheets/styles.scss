@@ -149,11 +149,12 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 50px;
 
     @include laptop {
       flex-direction: row;
       justify-content: space-evenly;
-      margin-top: 50px;
+      // margin-top: 50px;
     }
 
     a {
