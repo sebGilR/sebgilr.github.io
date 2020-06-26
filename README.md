@@ -13,6 +13,7 @@ This is my web portfolio, where you will have access to some of my projects, my 
 - Dynamically create each project/article entry instead of hard coding it.
 
 ## Screenshot
+
 ![screenshot](assets/img/portfolio.png)
 
 👤 **Sebastian Gil Rodriguez**
@@ -24,3 +25,7 @@ This is my web portfolio, where you will have access to some of my projects, my 
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## Acknowledgement
+
+Icons made by [Freepik](https://www.flaticon.com/authors/freepik)from [flaticon.com](https://www.flaticon.com/) and [freeicons.io](https://freeicons.io/)

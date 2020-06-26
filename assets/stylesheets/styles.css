@@ -438,8 +438,22 @@ main .projects_project .actions a:hover {
   padding-left: 15px;
 }
 
+main .projects_project .stack {
+  padding: 15px;
+  border-bottom: 10px solid #1f1e1e;
+  border-right: 20px solid #ebe9e9;
+  border-left: 20px solid #ebe9e9;
+  margin-top: 25px;
+}
+
+main .projects_project .stack img {
+  max-width: 36px;
+}
+
 main .projects_project_description {
   margin: 20px 0 30px 0;
+  font-weight: 500;
+  color: #333333;
 }
 
 @media (min-width: 768px) {
@@ -499,6 +513,7 @@ main .publications_publication {
       -ms-flex-align: center;
           align-items: center;
   padding: 20px;
+  font-weight: 500;
 }
 
 @media (min-width: 768px) {

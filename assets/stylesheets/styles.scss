@@ -363,8 +363,23 @@ main {
         }
       }
 
+      .stack {
+        padding: 15px;
+        // background-color: $primary;
+        border-bottom: 10px solid $primary;
+        border-right: 20px solid $secondary;
+        border-left: 20px solid $secondary;
+        // border-radius: px;
+        margin-top: 25px;
+        img {
+          max-width: 36px;
+        }
+      } 
+
       &_description {
         margin: 20px 0 30px 0;
+        font-weight: 500;
+        color: rgb(51, 51, 51);
 
         @include tablet {
           margin-top: 55px
@@ -407,6 +422,7 @@ main {
       justify-content: center;
       align-items: center;
       padding: 20px;
+      font-weight: 500;
 
       @include tablet {
         flex-direction: row;
